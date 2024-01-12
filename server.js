@@ -1,3 +1,13 @@
+/********************************************************************************
+ * BTI425 – Assignment 1
+ * I declare that this assignment is my own work in accordance with Seneca's
+ * Academic Integrity Policy:
+ * https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+ * Name: Nand K Patel
+ * Student ID: 166939215
+ * Date: 2024/01/12
+ * Published URL: https://difficult-cod-mittens.cyclic.app/
+ ********************************************************************************/
 const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
