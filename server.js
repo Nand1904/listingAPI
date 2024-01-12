@@ -79,7 +79,11 @@ db.initialize(process.env.MONGODB_CONN_STRING)
     app.delete("/api/listings/:id", async (req, res) => {
       try {
         const result = await db.deleteListingById(req.params.id);
+        if (result.deletedCount) {
           res.json({ message: "Listing deleted successfully" });
+         } else {
+          res.status(404).json({ message: "Listing not found" });
+         }
       } catch (error) {
         console.error(error);
         res.status(500).json({ message: "Failed to delete the listing" });
