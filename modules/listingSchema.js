@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
 
+mongoose.set("useNewUrlParser", true);
+mongoose.set("useUnifiedTopology", true);
+
 const reviewSchema = new mongoose.Schema({
   _id: String,
   date: Date,
