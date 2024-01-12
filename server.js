@@ -64,7 +64,7 @@ db.initialize(process.env.MONGODB_CONN_STRING)
     app.put("/api/listings/:id", async (req, res) => {
       try {
         const result = await db.updateListingById(req.body, req.params.id);
-        if (result.nModified) {
+        if (result) {
           res.json({ message: "Listing updated successfully" });
         } else {
           res.status(404).json({ message: "Listing not found" });
