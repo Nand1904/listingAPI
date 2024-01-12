@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 const listingSchema = require("./listingSchema");
 
-mongoose.set("useNewUrlParser", true);
-mongoose.set("useUnifiedTopology", true);
 module.exports = class ListingsDB {
   constructor() {
     // We don't have a `Listing` object until initialize() is complete
